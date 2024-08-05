@@ -1,0 +1,16 @@
+.row
+  .col.s12
+    // Upper left button to go back to all tickets
+    .col.s3.left-align
+      = link_to tickets_path, class: 'btn-floating btn-large orange' do
+        i.material-icons arrow_back
+
+    // Upper right buttons for editing and deleting
+    .col.s9.right-align
+      = link_to edit_ticket_path(@ticket), class: 'btn-floating btn-large green' do
+        i.material-icons edit
+      = link_to @ticket, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-floating btn-large red' do
+        i.material-icons delete
+
+
+= render @ticket

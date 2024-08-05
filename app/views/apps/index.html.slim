@@ -1,0 +1,9 @@
+h1 Apps
+
+#apps
+ .row
+  - @apps.each do |app|
+      .col.s12.m6.l4
+        == render app
+
+= link_to "New app", new_app_path, class: 'btn'

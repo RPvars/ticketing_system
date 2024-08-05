@@ -1,0 +1,65 @@
+= form_with(model: ticket) do |form|
+  - if ticket.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(ticket.errors.count, "error")} prohibited this ticket from being saved:"
+      ul
+        - ticket.errors.each do |error|
+          li = error.full_message
+
+  .card
+    .card-content
+      div
+        = form.label :requester_name, style: "display: block"
+        = form.text_field :requester_name
+
+      div
+        = form.label :requester_email, style: "display: block"
+        = form.text_field :requester_email
+
+      div
+        = form.label :requester_phone, style: "display: block"
+        = form.text_field :requester_phone
+
+      div
+        = form.label :requester_type, style: "display: block"
+        = form.number_field :requester_type
+
+      div
+        = form.label :problem_title, style: "display: block"
+        = form.text_field :problem_title
+
+      div
+        = form.label :problem_description, style: "display: block"
+        = form.text_area :problem_description
+
+      div
+        = form.label :link, style: "display: block"
+        = form.text_field :link
+
+      div
+        = form.label :language, style: "display: block"
+        = form.number_field :language
+
+      div
+        = form.label :assignee_id, style: "display: block"
+        = form.text_field :assignee_id
+
+      div
+        = form.label :app_id, style: "display: block"
+        = form.text_field :app_id
+
+      div
+        = form.label :related_ticket_id, style: "display: block"
+        = form.text_field :related_ticket_id
+
+      div
+        = form.label :status, style: "display: block"
+        = form.text_field :status
+
+      div
+        = form.label :priority, style: "display: block"
+        = form.text_field :priority
+        
+    .card-action
+      = form.submit 'Save', class: 'btn'
+      = link_to 'Back', apps_path, class: 'btn lime'

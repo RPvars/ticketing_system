@@ -1,0 +1,16 @@
+.row
+  .col.s12
+    .row
+      .col.s9
+        h1 Tickets
+      .col.s3.right-align
+        = link_to new_ticket_path, class: 'btn-floating btn-large waves-effect waves-light' do
+          i.material-icons add
+
+.row
+  - if @tickets.present?
+    - @tickets.each do |ticket|
+      == render ticket
+
+  - else 
+    p No tickets found.

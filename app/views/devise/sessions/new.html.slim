@@ -1,0 +1,23 @@
+h2 Log in
+
+.row
+  .col.s12.m6.offset-m3
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .input-field
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "validate"
+        = f.label :email
+
+      .input-field
+        = f.password_field :password, autocomplete: "current-password", class: "validate"
+        = f.label :password
+
+      p
+        label
+          = f.check_box :remember_me
+          | 
+          span Remember me
+
+      .actions
+        = f.submit "Log in", class: "btn waves-effect waves-light"
+
+    = render "devise/shared/links"

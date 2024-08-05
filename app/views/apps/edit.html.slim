@@ -1,0 +1,9 @@
+h1 Editing app
+
+== render "form", app: @app
+
+br
+
+div
+  => link_to "Show this app", @app, class: 'btn'
+  =< link_to "Back to apps", apps_path, class: 'btn lime'

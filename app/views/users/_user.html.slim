@@ -1,0 +1,30 @@
+.card
+  .card-content
+    p
+      strong Email:
+      =< user.email
+    p
+      strong Encrypted password:
+      =< user.encrypted_password
+    p
+      strong First name:
+      =< user.first_name
+    p
+      strong Last name:
+      =< user.last_name
+    p
+      strong Username:
+      =< user.username
+    p
+      strong Role:
+      =< user.role
+    p
+      strong Phone:
+      =< user.phone
+    p
+      strong Receive email notifications:
+      =< user.receive_email_notifications
+  .card-action
+    = link_to 'Show', user, class: 'btn'
+    = link_to 'Edit', edit_user_path(user), class: 'btn lime'
+    = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn red'

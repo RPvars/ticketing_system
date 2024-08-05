@@ -1,0 +1,43 @@
+@import 'materialize';
+
+.nav-wrapper {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-and-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.search-form {
+  margin: 0 auto;
+  max-width: 500px;
+  flex-grow: 1;
+}
+
+.search-form .input-field {
+  margin: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  vertical-align: middle;
+}

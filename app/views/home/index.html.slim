@@ -1,0 +1,25 @@
+.row
+  .col.s12
+    h3 All Tickets
+    - if @tickets.present?
+      .row
+        - @tickets.each do |ticket|
+          .col.s12.m6.l4
+            = link_to ticket_path(ticket), class: 'card-link' do
+              .card.hoverable
+                .card-content
+                  .icon-circle
+                    i.material-icons assignment
+                  span.card-title = ticket.problem_title
+                  p
+                    | #{ticket.problem_description}
+                    br
+                    | Requester: #{ticket.requester_name}
+                    br
+                    | Email: #{ticket.requester_email}
+                    br
+                    | Phone: #{ticket.requester_phone}
+                    br
+                    | Created at: #{ticket.created_at.strftime('%B %d, %Y')}
+    - else
+      p No tickets found.

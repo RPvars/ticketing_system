@@ -1,0 +1,12 @@
+nav.nav-wrapper.light-blue
+    a.brand-logo href="/" MEEMO
+    form.search-form
+      .input-field
+        input#search type="search" placeholder="Search" required=true
+        label.label-icon for="search"
+          i.material-icons search
+        i.material-icons close
+    ul.right
+      - if user_signed_in?
+        li
+          = image_tag current_user.avatar, class: 'avatar circle', alt: 'Profile Picture'

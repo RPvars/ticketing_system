@@ -1,0 +1,16 @@
+footer.page-footer.blue.lighten-4
+  .container
+    .row
+      .col.l6.s12
+        h5.white-text Footer Content
+        p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+      .col.l4.offset-l2.s12
+        h5.white-text Links
+        ul
+          li = link_to 'Home', root_path, class: 'grey-text text-lighten-3'
+          li = link_to 'Apps', apps_path, class: 'grey-text text-lighten-3'
+          li = link_to 'Users', users_path, class: 'grey-text text-lighten-3'
+          li = link_to 'Tickets', tickets_path, class: 'grey-text text-lighten-3'
+  .footer-copyright
+    .container
+      | © 2024 TicketingSystem

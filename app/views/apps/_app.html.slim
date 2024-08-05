@@ -1,0 +1,16 @@
+.card
+  .card-content
+    span.card-title = app.domain
+    p
+      | User Name: 
+      = app.user_name
+      br
+      | Company Name: 
+      = app.company_name
+      br
+      | Work Hours: 
+      = app.work_hours
+  .card-action
+    = link_to 'Show', app, class: 'btn'
+    = link_to 'Edit', edit_app_path(app), class: 'btn lime'
+    = link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn red'

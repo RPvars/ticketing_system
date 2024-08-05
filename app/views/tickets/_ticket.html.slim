@@ -1,0 +1,31 @@
+.col.s12.m6.l4
+  = link_to ticket_path(ticket), class: 'card-link' do
+    .card.hoverable
+      .card-content
+        .icon-circle
+          i.material-icons assignment
+        span.card-title = ticket.problem_title
+        p
+          | #{ticket.problem_description}
+          br
+          | Requester: #{ticket.requester_name}
+          br
+          | Email: #{ticket.requester_email}
+          br
+          | Phone: #{ticket.requester_phone}
+          br
+          | Requester type: #{ticket.requester_type}
+          br
+          | Link: #{ticket.link}
+          br
+          | Language: #{ticket.language}
+          br
+          | Assignee: #{ticket.assignee_id}
+          br
+          | App: #{ticket.app_id}
+          br
+          | Related ticket: #{ticket.related_ticket_id}
+          br
+          | Status: #{ticket.status}
+          br
+          | Priority: #{ticket.priority}
